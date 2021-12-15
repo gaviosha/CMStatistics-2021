@@ -49,7 +49,6 @@ set.seed(42)
 
 model.blocks$simulate() %>% 
   plot(
-    main = "Blocks",
     pch = 20,
     xlab = "", 
     ylab = "",
@@ -65,7 +64,6 @@ model.blocks$signal %>%
 
 model.cauchy$simulate() %>% 
   plot(
-    main = "Cauchy",
     pch = 20,
     xlab = "", 
     ylab = "",
@@ -82,7 +80,6 @@ model.cauchy$signal %>%
 
 model.bursts$simulate() %>%
   plot(
-    main = "Bursts",
     pch = 20,
     xlab = "", 
     ylab = "",
@@ -98,7 +95,6 @@ model.bursts$signal %>%
 
 model.poisson$simulate() %>%
   plot(
-    main = "Poisson",
     pch = 20,
     xlab = "", 
     ylab = "",
@@ -113,6 +109,7 @@ model.poisson$signal %>%
 
 
 all.changepoint.models <- list( 
+  blocks = model.blocks,
   poisson = model.poisson,
   cauchy = model.cauchy,
   bursts = model.bursts,

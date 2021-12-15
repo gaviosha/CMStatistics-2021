@@ -5,6 +5,7 @@
 #
 #========================================
 
+library(magrittr)
 
 #---------------------------------
 # 
@@ -29,7 +30,6 @@ set.seed(42)
 
 model.list$plain.gauss() %>%
   plot(
-    main = "Plain Gaussian",
     type = "b",
     pch = 20,
     xlab = "", 
@@ -39,7 +39,6 @@ model.list$plain.gauss() %>%
 
 model.list$plain.poisson() %>% 
   plot(
-    main = "Plain Poisson",
     type = "b",
     pch = 20,
     xlab = "", 
@@ -49,7 +48,6 @@ model.list$plain.poisson() %>%
 
 model.list$heterogeneous.gauss() %>% 
   plot(
-    main = "Heterogeneous Gaussian",
     type = "b",
     pch = 20,
     xlab = "", 
@@ -59,7 +57,6 @@ model.list$heterogeneous.gauss() %>%
 
 model.list$symmetric.bernoulli() %>% 
   plot(
-    main = "Symmetric Bernoulli",
     type = "b",
     pch = 20,
     xlab = "", 
@@ -69,7 +66,6 @@ model.list$symmetric.bernoulli() %>%
 
 model.list$plain.cauchy() %>% 
   plot(
-    main = "Plain Cauichy",
     type = "b",
     pch = 20,
     xlab = "", 
@@ -79,7 +75,6 @@ model.list$plain.cauchy() %>%
 
 model.list$mix.2() %>% 
   plot(
-    main = "Poisson / Normal mix",
     type = "b",
     pch = 20,
     xlab = "", 
