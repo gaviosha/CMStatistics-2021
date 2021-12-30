@@ -163,10 +163,15 @@ runs.test <- function(yy, thresh, deg)
   
   if (max.runs >= length(yy)) return(0)
   
+  
+  no.fits <- TRUE
+  
   test.non.increasing <- get.bounds.non.increasing(yy, max.runs)
   
   if (test.non.increasing$shape.check) 
   {
+    
+    no.fits <- FALSE
     
     if (deg == 0)
     {
@@ -192,6 +197,9 @@ runs.test <- function(yy, thresh, deg)
   
   if (test.non.decreasing$shape.check)
   {
+    
+    no.fits <- FALSE
+    
     if (deg == 0)
     {
       
@@ -210,9 +218,13 @@ runs.test <- function(yy, thresh, deg)
     }
   }
   
+  
+  if (no.fits) return(1)
+  
   return(0)
   
 }
+
 
 runs.test.experimental <- function(yy, thresh) 
 {
